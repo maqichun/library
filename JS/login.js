@@ -1,0 +1,42 @@
+/*验证*/
+$("#form").validate({
+		submitHandler:function(form){
+			$.ajax({
+				type:"post",
+				url:"data/users/login.php",
+				data:$(form).serialize(),
+				success:function(data){
+					if(data == 0){
+						alert("登录失败");
+					}else{
+						let i=location.search.indexOf("=");
+						location.href=location.search.slice(i+1);
+					}
+				},
+				error:function(){
+					console.log("连接错误");
+				}
+			})
+		},
+		rules:{
+			uname:{
+				required:true,
+				minlength:2
+			},
+			upwd:{
+				required:true,
+				minlength:6,
+				maxlength:8,
+				digits:true
+			}
+		},
+		messages:{
+			uname:{
+				required:"用户名不能为空!"
+			},
+			upwd:{
+				required:"密码不能为空!"
+			}
+		}
+});
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>后台管理界面</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+	#head{
+		height:100px;
+		line-height:100px;
+		text-align:center;
+		background:#AFEEEE;
+	}
+	#side{
+		width:100px;
+		height:1000px;
+		background:#E6E6FA;
+		float:left;
+		text-align:center;
+	}
+	#section{
+		float:left;
+		width:1000px;
+		height:1000px;
+		border:1px solid transparent;
+	}
+	#side li a{
+		color:#1E90FF;
+		font:bold 20px "楷体";
+	}
+	#side li{
+		margin-top:50px;
+	}
+  </style>
+ </head>
+ <body onload="changeTxt('userList.html')">
+	<div id="head">
+		<h1>后台管理</h1>
+	</div>
+	<div id="side">
+		<ul>
+			<li>
+				<a href="javascript:changeTxt('userList.html')">用户列表</a>
+			</li>
+			<li>
+				<a href="javascript:changeTxt('booksList.html')">书籍列表</a>
+			</li>
+			<li>
+				<a href="javascript:changeTxt('addBook.html')">添加书籍</a>
+			</li>
+			<li>
+				<a href="javascript:changeTxt('borrowBook.html')">借阅书籍</a>
+			</li>
+		</ul>
+	</div>
+	<div id="section">
+	</div>
+	<script src="../JS/jquery-1.11.3.js"></script>
+	<script>
+	//引入外部页面
+		function changeTxt(html) {
+			var str = "<iframe src='"+html+"' frameborder='0' width='1000' height='1000'></iframe>";
+			$("#section").html(str);
+		}
+	</script>
+ </body>
+</html>

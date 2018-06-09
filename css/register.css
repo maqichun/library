@@ -1,0 +1,42 @@
+body{
+	font-size:20px;
+}
+h1{
+	color:#87CEFA;
+}
+img{
+	vertical-align:bottom;
+}
+#register{
+	background:url(../img/register/1.jpg) no-repeat right center;
+}
+#register div{
+	margin:30px 0;
+	height:30px;
+	line-height:30px;
+	padding-left:100px;
+}
+#register div b{
+	color:#6A5ACD;
+}
+#register div.input input{
+	border:1px solid #06BAD1;
+	box-sizing:border-box;
+	height:30px;
+	line-height:30px;
+	outline:0;
+	position:relative;
+	top:-4px;
+}
+#register input.button{
+	height:30px;
+	line-height:30px;
+	padding:0 20px;
+	margin:0 40px;
+	background:#7CE3FA;
+	border:2px solid #fff;
+	border-radius:5px;
+}
+#register input.button:hover{
+	cursor:pointer;
+}

@@ -1,0 +1,35 @@
+body{
+	font-size:20px;
+}
+h1{
+	color:red;
+}
+img{
+	vertical-align:bottom;
+}
+#update div{
+	margin:30px 0;
+	height:30px;
+	line-height:30px;
+	padding-left:100px;
+}
+#update b{
+	color:#6A5ACD;
+}
+#update div.input input{
+	border:1px solid #06BAD1;
+	height:30px;
+	line-height:30px;
+}
+#update .button{
+	height:30px;
+	line-height:30px;
+	padding:0 20px;
+	margin:0 40px;
+	background:#7CE3FA;
+	border:2px solid #fff;
+	border-radius:5px;
+}
+#update input.button:hover{
+	cursor:pointer;
+}

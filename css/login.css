@@ -1,0 +1,36 @@
+.main{
+	background:url(../img/banner.jpg) no-repeat;
+	min-height:700px;
+	border:1px solid transparent;
+}
+.main>h1{
+	color:#00E0ED;
+	margin:100px 100px;
+}
+.main>form{
+	margin-left:100px;
+}
+.main>form>.input{
+	margin:20px 0;
+}
+.main>form>.input>b{
+	color:#6A5ACD;
+	font-size:20px;
+}
+.main>form>.input>input{
+	outline:none;
+	height:30px;
+	line-height:30px;
+	width:200px;
+}
+.main>form>.go-to input{
+	width:80px;
+	height:30px;
+	line-height:30px;
+	background:#00BFFF;
+	color:#fff;
+	border:1px solid transparent;
+	border-radius:5px;
+	cursor:pointer;
+	margin:50px 50px;
+}

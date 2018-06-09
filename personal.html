@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/personal.css">
+  <title>个人中心</title>
+  <style>
+	  input.error{
+        box-shadow: 0 0 10px red;
+      }
+      label.error{
+        background-image:url(img/err.png);
+        color:red;
+        background-repeat:no-repeat;
+        background-position:left;
+        background-size: 25px 25px;
+        padding-left:25px;
+        margin-left:10px;
+        font-style: italic;
+      }
+  </style>
+ </head>
+ <body>
+	<div class="fade">
+		<h1>
+			<img src="img/personal/4.jpg">
+			个人中心
+		</h1>
+		<form id="update">
+			<p>
+				<input type="hidden" value="2" name="uid">
+			</p>
+			<div class="input">
+				<b>用户名称:</b>
+				<input name="uname">
+			</div>
+			<div class="input">
+				<b>用户密码:</b>
+				<input type="password" name="upwd">
+			</div>
+			<div class="input">
+				<b>用户邮箱:</b>
+				<input name="email">
+			</div>
+			<div class="input">
+				<b>用户电话:</b>
+				<input name="mobile">
+			</div>
+			<div class="input">
+				<b>用户年龄:</b>
+				<input name="age">
+			</div>
+			<div>
+				<b>用户性别:</b>
+				<input type="radio" name="sex" value="男" id="male" checked>
+				<label for="male">男</label>
+				<input type="radio" name="sex" value="女" id="female">
+				<label for="female">女</label>
+			</div>
+			<div>
+				<input type="submit" value="修改" class="button">
+				<a id="backIdx" href="#" class="button">返回首页</a>
+			</div>
+		</form>
+	</div>
+	<script src="JS/jquery-1.11.3.js"></script>
+	<script src="JS/validate/jquery.validate.js"></script>
+	<script src="JS/validate/messages_zh.js"></script>	
+	<script src="JS/common.js"></script>
+	<script src="JS/personal.js"></script>
+ </body>
+</html>

@@ -1,0 +1,10 @@
+table{
+	border:1px solid #F4A460;
+}
+thead td{
+	font:bold 20px "楷体";
+}
+tbody td:first-child{
+	color:#00E0ED;
+	font-size:20px;
+}

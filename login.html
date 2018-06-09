@@ -1,0 +1,58 @@
+	<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>登录界面</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+  <style>
+	  input.error{
+        box-shadow: 0 0 10px red;
+      }
+      label.error{
+        background-image:url(img/err.png);
+        color:red;
+        background-repeat:no-repeat;
+        background-position:left;
+        background-size: 25px 25px;
+        padding-left:25px;
+        margin-left:10px;
+        font-style: italic;
+      }
+  </style>
+ </head>
+ <body>
+	<div class="fade">
+		<div class="main">
+			<h1>用户登录</h1>
+			<form id="form" action="data/login.php" method="post">
+				<div class="input">
+					<b>用户名称:</b> 
+					<input type="text" name="uname">
+					<span>（至少输入2个字符）</span>	
+				</div>
+				<div class="input">
+					<b>用户密码:</b>   
+					<input type="password" name="upwd">
+					<span>（请输入6-8个数字）</span>
+				</div>
+				<div class="go-to">
+					<input type="submit" value="登录">
+					<a href="register.html">
+						<input type="button" value="注册">
+					</a>
+				</div>
+			</form>
+		<div>
+	</div>
+	<script src="JS/jquery-1.11.3.js"></script>
+	<script src="JS/validate/jquery.validate.js"></script>
+	<script src="JS/validate/messages_zh.js"></script>
+	<script src="JS/login.js"></script>
+	<script src="JS/common.js"></script>
+ </body>
+</html>

@@ -1,0 +1,65 @@
+/*公共部分*/
+html,body{
+	width: 100%; 
+	min-height: 100%;
+}
+*{box-sizing:border-box;}
+body{
+	margin:0; 
+	min-width:950px;
+	font-size:14px; 
+	font-family:"Microsoft Yahei";
+}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p,img,input {
+	margin:0; 
+	padding:0;
+}
+ul{list-style:none;}
+img{
+	border:0px;
+	vertical-align:bottom;
+}
+a{
+	color:#666;
+	text-decoration:none;
+	cursor:pointer;
+}
+a:hover{
+	text-decoration:none;
+}
+input{
+	font-family:"Microsoft Yahei";
+	padding: 0; 
+	margin: 0; 
+	color: #666;
+}
+button{
+	font-family:"Microsoft Yahei";
+}
+.lf{
+	float:left;
+}
+.rf{
+	float:right;
+}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.main{
+	width:100%;
+	min-height:300px;
+	margin:0 auto;
+}
+.fade{
+	width:0;
+	opacity:0;
+	overflow:hidden;
+	transition:all .5s linear;
+}
+.in{
+	width:1200px;
+	opacity:1;
+	margin:0 auto;
+}

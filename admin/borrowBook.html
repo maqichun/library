@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>借阅书籍</title>
+  <style>
+	body,p{
+		margin:0;
+		color:red;
+	}
+	input{
+		outline:0;
+		height:20px;
+		line-height:20px;
+		margin-top:30px;
+	}
+	#main{
+		padding-left:500px;
+	}
+	#main p.btn input{
+		width:100px;
+		height:30px;
+		background:#00FFFF;
+		margin-left:100px;
+	}
+  </style>
+ </head>
+ <body>
+	<div id="main">
+		<form action="">
+			<p>
+				用户编号:
+				<input type="text" id="uid" name="uid">
+			</p>
+			<p>
+				用户名称:
+				<input type="text" id="uname" name="uname">
+			</p>
+			<p>
+				书籍名称:
+				<input type="text" id="book" name="book">
+			</p>
+			<p>
+				借阅日期:
+				<input type="text" id="date" name="date">
+			</p>
+			<p class="btn">
+				<input type="submit" value="提交">
+			</p>
+		</form>
+	</div>
+	<script src="JS/jquery-1.11.3.js"></script>
+	<script>
+		/*function btn_borrow() {
+			var xhr = null;
+			if(window.XMLHttpRequest) {
+			//标准异步对象
+				xhr = new XMLHttpRequest();
+			}else {
+			//IE8以下的异步对象
+				xhr = new ActiveXObject();
+			}
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4 && xhr.status == 200)	{
+					var result = xhr.responseText;
+					alert(result);
+				}
+			}
+			xhr.open("post","borrowBook.php",true);
+			//设置请求消息头
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var b_uid = $("b_uid").value;
+			var b_uname = $("b_uname").value;
+			var b_book = $("b_book").value;
+			var b_date = $("b_date").value;
+			msg = "b_uid="+b_uid+"&b_uname="+b_uname+"&b_book="+b_book+"&b_date="+b_date;
+			xhr.send(msg);
+		}*/
+	</script>
+ </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>管理员登录界面</title>
+  <link rel="stylesheet" href="../css/head.css">
+  <style>
+	body{
+		background:#E6E6FA;
+	}
+	h1{
+		color:#0000E0;
+		margin:80px 0;
+	}
+	#form div.input{
+		height:30px;
+		line-height:30px;
+		margin-bottom:50px;
+		margin-left:550px;
+	}
+	#form div.pwd input{
+		position:relative;
+		left:14px;
+	}
+	#form div.btn{
+		margin-left:550px;
+	}
+	#form div.btn input{
+		width:50px;
+		height:30px;
+		line-height:30px;
+		background:#00E0ED;
+		border:1px solid #fff;
+		border-radius:5px;
+		outline:0;
+		margin-right:60px;
+	}
+	#form div.btn input:hover{
+		cursor:pointer;
+	}
+  </style>
+ </head>
+ <body>
+	<h1 align="center">管理员登录</h1>
+	<form action="ad_login.php" id="form" method="post">
+		<div class="input">
+			用户名：
+			<input type="text" name="a_uname">
+		</div>
+		<div class="input pwd">
+			密码：
+			<input type="password" name="a_pwd">
+		</div>
+		<div class="btn">
+			<input type="submit" value="登录">
+			<input type="reset" value="重置">
+		</div>
+	</form>
+ </body>
+</html>

@@ -1,0 +1,72 @@
+/*footer*/
+div.footer{
+	display:flex;
+	justify-content:space-between;
+	padding:80px 200px;
+	background:#4D4D4D;
+}
+div.footer li:first-child{
+	color:#fff;
+	font-size:25px;
+	margin-bottom:20px;
+}
+div.footer li:not(:first-child){
+	margin-bottom:15px;
+}
+div.footer li a{
+	color:#8D8D8C;
+}
+div.footer li a:hover{
+	color:#fff;
+}	
+div.footer li{
+	color:#8D8D8C;
+}
+/*copy*/
+div.copy{
+	background:#454545;
+	padding:20px 100px;
+}
+div.copy li{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	border:1px solid #fff;
+	float:right;
+	margin-right:10px;
+}
+div.copy li:nth-child(4){
+	background:url(../img/footer/img-sp.png) no-repeat 2px -4px;
+}
+div.copy li:nth-child(3){
+	    background:url(../img/footer/img-sp.png) no-repeat 2px -40px;
+}
+div.copy li:nth-child(2){
+	background:url(../img/footer/img-sp.png) no-repeat 1px -75px;
+}
+div.copy li:nth-child(1){
+	background:url(../img/footer/img-sp.png) no-repeat 0px -114px;
+}
+/*鼠标移动到上面时*/
+div.copy li:nth-child(4):hover{
+	background:url(../img/footer/img-sp.png) no-repeat -40px -4px;
+}
+div.copy li:nth-child(3):hover{
+	    background:url(../img/footer/img-sp.png) no-repeat -38px -40px;
+}
+div.copy li:nth-child(2):hover{
+	background:url(../img/footer/img-sp.png) no-repeat -38px -75px;
+}
+div.copy li:nth-child(1):hover{
+	background:url(../img/footer/img-sp.png) no-repeat -38px -114px;
+}
+div.copy li a{
+	display:block;
+	width:40px;
+	height:40px;
+	border:1px solid #fff;
+	border-radius:50%;
+	position:relative;
+	top:-1px;
+	left:-1px;
+}

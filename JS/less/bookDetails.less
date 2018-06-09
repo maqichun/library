@@ -1,0 +1,276 @@
+@baseColor: #FF6347;//基色
+@fontColor: #666;
+@borderSize: 1px;
+@borderStyle: solid;
+@borderColor: #ddd;
+.in{
+  width: 960px;
+}
+//导航
+.nav{
+  margin: 10px 0;
+  color: #000;
+}
+.nav>a:hover{
+  color: @baseColor;
+}
+//详情左
+.detail>.leftbox{
+  width: 692px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+//标题
+.detail>.leftbox>.title{
+  text-align: center;
+  color: @fontColor;
+}
+.detail>.leftbox>.title>h1{
+  margin: 20px 0 10px 0;
+}
+.detail>.leftbox>.title>p>span:first-child{
+  color: @baseColor;
+  margin-right: 10px;
+}
+.detail>.leftbox>.title>p>span:last-child>a:hover{
+  color: @baseColor;
+}
+//内容
+.detail>.leftbox>.content{
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 20px;
+}
+.detail>.leftbox>.content>.content_left{
+  width: 200px;
+}
+.detail>.leftbox>.content>.content_right{
+  width: 434px;
+}
+.detail>.leftbox>.content>.content_right>.tabmenu{
+  height: 40px;
+  line-height: 32px;
+}
+.detail>.leftbox>.content>.content_right>.tabmenu>ul>li{
+  display: inline;
+  border: @borderSize @borderStyle @borderColor;
+  border-bottom-color: transparent;
+  margin-right: 3px;
+  padding: 5px 10px;
+}
+.detail>.leftbox>.content>.content_right>.tabmenu>ul>li.hover{
+  color: @baseColor;
+}
+//书籍简介
+.detail>.leftbox>.content>.content_right .intro{
+  height: 193px;
+  overflow-y: auto;
+  text-indent: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+.detail>.leftbox>.content>.content_right .warning{
+  padding-top: 15px;
+  font-size: 14px;
+  color: @baseColor;
+  font-weight: bold;
+}
+.detail>.leftbox>.content>.content_right>.tab_content>.block{
+  min-height: 230px;
+  display: block;
+}
+//作品信息
+.message{
+  line-height: 30px;
+}
+.message>ul{
+  overflow: hidden;
+}
+.message>ul>li{
+  float: left;
+  width: 140px;
+}
+.message>ul>li>span.org{
+  color: @baseColor;
+}
+//作者标签
+.detail>.leftbox>.content>.content_right>.athor_tab{
+  background: #f9f9f9;
+  padding: 6px 12px;
+}
+.detail>.leftbox>.content>.content_right>.athor_tab>a:hover{
+  color: @baseColor;
+}
+//下载打赏
+.detail>.leftbox>.content>.content_right>.download{
+  border: @borderSize @borderStyle @borderColor;
+}
+.detail>.leftbox>.content>.content_right>.download>a{
+  text-align: center;
+  float: left;
+  width: 96px;
+  line-height: 24px;
+  overflow: hidden;
+  display: block;
+  border-right: @borderSize @borderStyle @borderColor;
+}
+.detail>.leftbox>.content>.content_right>.download>a:hover{
+  color: @baseColor;
+}
+.detail>.leftbox>.content>.content_right>.download>a.down1{
+  width: 120px;
+}
+//右侧内容
+.detail>.rightbox{
+  width: 256px;
+  position: relative;
+}
+//粉丝排行榜
+.detail>.rightbox>.fans{
+  width: 100%;
+  border: @borderSize @borderStyle @borderColor;
+}
+.detail>.rightbox>.fans>.fans_title{
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.detail>.rightbox>.fans>.fans_title>h3{
+  float: left;
+  margin-left: 10px;
+  color: #333;
+}
+.detail>.rightbox>.fans>.fans_title:before{
+  content: "";
+  float: left;
+  display: block;
+  width: 3px;
+  height: 34px;
+  background: @baseColor;
+}
+#fans_top>li{
+  height: 26px;
+  line-height: 26px;
+  padding-left:  15px;
+  border-top: @borderSize @borderStyle @borderColor;
+}
+#fans_top>li.head{
+  height: 32px;
+  line-height: 32px;
+  border-top: none;
+}
+#fans_top>li>span{
+  font-size: 12px;
+  overflow: hidden;
+  display: inline-block;
+}
+#fans_top>li>span.f_t{
+  width: 64px;
+}
+#fans_top>li>span.f_n{
+  width: 110px;
+  color: @baseColor;
+}
+#fans_top>li>span.f_g{
+  width: 40px;
+}
+#fans_top>li.head>span{
+  font-size: 14px;
+  color: @fontColor;
+}
+#fans_top>li.no1>span.f_t>i{
+  color: red;
+  font-weight: 900;
+}
+#fans_top>li.no2>span.f_t>i{
+  color: purple;
+  font-weight: 900;
+}
+#fans_top>li.no3>span.f_t>i{
+  color: deepskyblue;
+  font-weight: 900;
+}
+//客服
+.detail>.rightbox>.service{
+  margin-top: 20px;
+}
+.detail>.rightbox>.service>.service_box>p{
+  padding-left: 20px;
+  line-height: 22px;
+  font-size: 12px;
+}
+//评论区
+.trans{ //过渡图片
+  height: 150px;
+  overflow: hidden;
+  opacity: .1;
+}
+//输入区
+.comment{
+  margin-top: 15px;
+}
+//标题
+.comment>.pl{
+  padding: 10px 24px;
+}
+.comment>.txt_input>.txt_title{
+  line-height: 40px;
+}
+.comment>.txt_input>.txt_title>a{
+  color: @baseColor;
+}
+#txt_name{
+  color: #000;
+}
+#txt_name:hover{
+  color: @baseColor;
+}
+//内容输入
+#cmt_content{
+  width: 100%;
+  border: @borderSize @borderStyle @borderColor;
+  height: 120px;
+  resize: none;
+}
+//回复区
+.pl_list{
+  border-bottom: 1px dotted #2F4F4F;
+  padding: 6px 0px;
+  line-height: 24px;
+}
+.pl_list>.p1{
+  padding-bottom: 5px;
+}
+.pl_list>.p1>.pl_name{
+  color: @baseColor;
+}
+.pl_list>.p1>.pl_time{
+  color: #999;
+  font-size: 12px;
+}
+//页面
+.page{
+  padding-top: 20px;
+  height: 60px;
+  text-align: center;
+}
+.page>a{
+  padding: 0px 7px;
+  margin: 0px 3px;
+  color: #666;
+  line-height: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+.page>a:hover{
+  color: #fff;
+  background: @baseColor;
+  border: 1px solid orange;
+}
+.page>.active{
+  color: #fff;
+  background: @baseColor;
+  border: 1px solid orange;
+}

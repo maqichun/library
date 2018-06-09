@@ -1,0 +1,62 @@
+#设置连接时的字符集
+SET NAMES UTF8;
+#丢弃数据库如果存在
+DROP DATABASE IF EXISTS lib_system;
+#创建数据库
+CREATE DATABASE lib_system CHARSET = UTF8;
+USE lib_system;
+#创建表格users(uid,uname,upwd,sex,age,phone,email)
+CREATE TABLE users(
+  uid INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(16) UNIQUE,
+  upwd VARCHAR(32) NOT NULL,
+  sex INT,
+  age INT,
+  phone INT,
+  email VARCHAR(64)
+);
+#管理员表admin(编号,用户名,密码)
+CREATE TABLE admin(
+  aid INT PRIMARY KEY AUTO_INCREMENT,
+  a_uname VARCHAR(16) UNIQUE,
+  a_pwd VARCHAR(32) NOT NULL
+);
+#书籍种类表kind
+CREATE TABLE kind(
+  kid INT PRIMARY KEY AUTO_INCREMENT,
+  kinds VARCHAR(32) UNIQUE
+);
+#书目表books
+CREATE TABLE books(
+  bid INT PRIMARY KEY AUTO_INCREMENT,
+  bname VARCHAR(32) UNIQUE,
+  athor VARCHAR(16) NOT NULL,
+  press VARCHAR(32),
+  kong VARCHAR(32)
+);
+#书籍详细信息表
+CREATE TABLE book_details(
+  did INT PRIMARY KEY AUTO_INCREMENT,
+  dname VARCHAR(32) UNIQUE,
+  dathor VARCHAR(16) NOT NULL,
+  dpress VARCHAR(32),
+  dtype VARCHAR(8),
+  dimpower VARCHAR(1),
+  dprogress VARCHAR(1),
+  dtotil INT,
+  dDouble INT,
+  dred INT,
+  dshang INT
+);
+#评论表
+CREATE TABLE comment(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  
+);
+#轮播图
+CREATE TABLE banner(
+  baid INT PRIMARY KEY AUTO_INCREMENT,
+  img VARCHAR(128),
+  did INT,
+  FOREIGN KEY(did) REFERENCES book_details(did)
+)

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>添加书籍</title>
+  <style>
+	body,p,h1{
+		margin:0;
+		color:red;
+		font:25px "楷体";
+	}
+	input{
+		outline:0;
+		border:1px solid #0AA1ED;
+		height:25px;
+	}
+	b{
+		display:block;
+		margin-top:10px;
+	}
+	#main{
+		padding-left:500px;
+	}
+	#main input[value]{
+		width:100px;
+		height:30px;
+		line-height:30px;
+		margin:20px 40px;
+		background:#00FFFF;
+		border:0;
+		border-radius:5px;
+	}
+	#main input[value]:hover{
+		cursor:pointer;
+	}
+  </style>
+ </head>
+ <body>
+	<div id="main">
+		<form action="">
+			<p>
+				<b>书籍名称:</b>
+				<input type="text" id="bk_name" name="bk_name">
+			</p>
+			<p>
+				<b>作者:</b>
+				<input type="text" id="athor" name="athor">
+			</p>
+			<p>
+				<b>类别:</b>
+				<select name="kind_id" id="kind_id">
+					<option value="1">文学类</option>
+					<option value="2">历史类</option>
+					<option value="3">小说类</option>
+					<option value="4">散文类</option>
+					<option value="5">诗歌类</option>
+					<option value="6">言情类</option>
+				</select>
+			</p>
+			<p>
+				<b>出版社:</b>
+				<input type="text" id="press" name="press">
+			</p>
+			<p>
+				<input type="submit" value="添加">
+			</p>
+		</form>
+	</div>
+	<script src="../JS/jquery-1.11.3.js"></script>
+	<script>
+		//获取选择框的值
+		var kind_id = 1;
+		$("#kind_id").change(function(){
+			kind_id=$(this).val();
+		});
+		//将数据发送到数据库,进行添加
+		$(":submit").click(function(e){
+			e.preventDefault();
+			var bk_name=$("#bk_name").val();
+			var athor=$("#athor").val();
+			var press=$("#press").val();
+			$.ajax({
+				type:"post",
+				url:"addBook.php",
+				data:{ bk_name, athor, press, kind_id},
+				success:function(data){
+					alert(data);
+				}
+			})
+		})
+		/*function addBook() {
+			var xhr = createXhr();
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4 && xhr.status == 200) {
+					var result = xhr.responseText;
+					alert(result);
+				}
+			}
+			xhr.open("post","addBook.php",true);
+			//设置请求消息头
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var bk_name = $("bk_name").value;
+			var athor = $("athor").value;
+			var press = $("press").value;
+			msg = "bk_name="+bk_name+"&athor="+athor+"&kind_id="+kindId+"&press="+press;
+			xhr.send(msg);
+		}*/
+	</script>
+ </body>
+</html>

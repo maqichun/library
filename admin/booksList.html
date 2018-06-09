@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>书籍列表</title>
+  <link rel="stylesheet" href="../css/table.css">
+  <style>
+	table{
+		text-align:center;
+	}
+	a{
+		text-decoration:none;
+		color:red;
+	}
+	a:hover{
+		color:#00E00D;
+	}
+  </style>
+ </head>
+ <body>
+	<table border=1 cellspacing="0" align="center">
+		<thead>
+			<tr>
+				<td>书籍编号</td>
+				<td>书名</td>
+				<td>作者</td>
+				<td>种类</td>
+				<td>出版社</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody id="myBody"></tbody>
+	</table>
+	<script src="../JS/jquery-1.11.3.js"></script>
+	<script src="../JS/admin/bookList.js"></script>
+	<script>
+		/*function bookList() {
+			var xhr = createXhr();
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4 && xhr.status == 200) {
+					var result = xhr.responseText;
+					var res = JSON.parse(result);
+					var str = "";
+					var kind = "";
+					for(var i = 0; i < res.length; i++) {
+						kind = res[i].kind_id;
+						switch (kind)
+						{
+							case "1":
+								kind = "文学类";
+								break;
+							case "2":
+								kind = "历史类";
+								break;
+							case "3":
+								kind = "小说类";
+								break;
+							case "4":
+								kind = "散文类";
+								break;
+							case "5":
+								kind = "诗歌类";
+								break;
+							case "6":
+								kind = "言情类";
+								break;
+							default:
+								console.log("雅思啦");
+						}
+						str += "<tr>";
+						str += "<td>"+res[i].bkid+"</td>";
+						str += "<td>"+res[i].bk_name+"</td>";
+						str += "<td>"+res[i].athor+"</td>";
+						str += "<td>"+kind+"</td>";
+						str += "<td>"+res[i].press+"</td>";
+						str += "<td>";
+						str += "<a href='javascript:deleteBook("+res[i].bkid+")'>删除</a>"
+						str += "</td>";
+						str += "</tr>";
+					}
+					$("myBody").innerHTML = str;
+				}
+			}
+			xhr.open("get","booksList.php",true);
+			xhr.send(null);
+		}
+		//删除操作
+		function deleteBook(id) {
+			var xhr = null;
+			if(window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest();
+			}else {
+				xhr = new ActiveXObject("Microsoft.XMLHttp");
+			}
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4 && xhr.status == 200) {
+					var result = xhr.responseText;
+					alert(result);
+					bookList();
+				}
+			}
+			xhr.open("get","deleteBook.php?bkid="+id,true);
+			xhr.send(null);
+		}*/
+	</script>
+ </body>
+</html>

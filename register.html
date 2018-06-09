@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/register.css">
+  <title>注册界面</title>
+  <style>
+	  input.error{
+        box-shadow: 0 0 10px red;
+      }
+      label.error{
+        background-image:url(img/err.png);
+        color:red;
+        background-repeat:no-repeat;
+        background-position:left;
+        background-size: 25px 25px;
+        padding-left:25px;
+        margin-left:10px;
+        font-style: italic;
+      }
+  </style>
+ </head>
+ <body>
+	<div class="fade">
+		<h1>
+			<img src="img/register/w6.jpg" alt="图片出错">
+			欢迎注册
+		</h1>
+		<form id="register">
+			<div class="input">
+				<b>用户名称:</b>
+				<input type="text" name="uname">
+				<span id="show-uname">（请输入2-12的字符）</span>
+			</div>
+			<div class="input">
+				<b>用户密码:</b>
+				<input id="upwd" type="password" name="upwd">
+				<span id="show-upwd">（请输入6-10数字）</span>
+			</div>
+			<div class="input">
+				<b>确认密码:</b>
+				<input type="password" name="rpwd">
+				<span id="show-rpwd">（请再次输入密码）</span>
+			</div>
+			<div class="input">
+				<b>用户邮箱:</b>
+				<input type="email" name="email">
+			</div>
+			<div class="input">
+				<b>用户电话:</b>
+				<input name="mobile">
+			</div>
+			<div class="input">
+				<b>用户年龄:</b>
+				<input name="age">
+				<span>（请输入12-60的数字）</span>
+			</div>
+			<div>
+				<b>用户性别:</b>
+				<input type="radio" name="sex" value="男" id="male" checked>
+				<label for="male">男</label>
+				<input type="radio" name="sex" value="女" id="female">
+				<label for="female">女</label>
+			</div>
+			<div>
+				<input type="submit" value="提交" class="button">
+				<a href="login.html">
+					<input type="button" value="登录" class="button">
+				</a>
+			</div>
+		</form>
+	</div>
+	<script src="JS/jquery-1.11.3.js"></script>
+	<script src="JS/validate/jquery.validate.js"></script>
+	<script src="JS/validate/messages_zh.js"></script>	
+	<script src="JS/common.js"></script>
+	<script src="JS/register.js"></script>
+ </body>
+</html>
